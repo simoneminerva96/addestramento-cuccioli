@@ -10,13 +10,12 @@
     <link rel="icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAEGUlEQVR4AbWXA5JsWRCFt7Jtl3VXdu3aTnfduu7a7tq1a9uu67qOu3Nn7iTTJZkkQyZzZqIzf7xZ5Hk9TwA+Ev/pT/H8+vVrYQghCEInLz+/9Nlnn10F/xlSSimEEKWUAfLz84tDQ0NvKioqpKenJ3788cedvLz8TfxDkiS5XA6H43A4HI7H43G5XEnyh+fff/99Hhsb+zQzM3M0Nzc3O51Ozc/Pz361Wg0Ae3t7P8PDw78Hg8H3dXd339vb2/tLS0vLhUIhUbFY/DcYDP4dHR39qKOj46GhoSEcDof/hoaG/kM+ISsri6aKCgoGx44dO7Zp06bNmJgYjL1nzhwbNmwYEBwc9J///Of77Nmz7/Dw8D8QCGytra1fKyoqPgEBAZ/AwMAgFAoVCoVCpVKhVCqRSCSKonEcZ7lcGIbhOI4syzLGAIAxBsMwhmEMwxjDMAzDMAzDMAzDMAzDMAzDMAzDMAzDMAzDMAzDMAzDMAzDMAzD2Gw29ff3R6PRAJRSCCGEEEIIIYQQQgghhBBCSCHGGFKKSClFKUUIISCkiIiIAAAEBgYCAAAgIyOD4uLikKSJoiiK4ziOoygKANTU1ODo6IjPnz+jt7cXsixjbGxsODg4qKqqihBCSqmqKkIIURRFURRFURTFcZwgCCdPntTW1rYtLy+XhoaG/AYGBv4hH2tra2NjY+MPxGIxFycnJz8iIiL+AgMDf7darb+AfPly5dq1a9fGxsZ29fb2/hoaGvrD4fDvkCRJ/gEBHx+fdxKJxPdAILD3G/j9999bWVkZ2ffGG2+cNHLkSMDfvXt32NraGhQUFMSSXbp06S+++OKLrKys/Ojo6F/g5eXlwWAw+PvFixdv3rx584YNG4YkSdJutzs9PT0KhQIAcHJyMjk5OYFAAIAdO3bIyMhAKpUCAKCnp4ewsBAcDgcAFItFLBYLAFBQUIDs7GwAxGIxWVlZAMhkMkFBQQCAw+EQERGhkJAQpFIpACAYDAYHBzM7O5tCoRAdHQ0AiEQiMjOzAABZWVmFhIQCAKCnp7u0tDQAIBgMPjU1NRYWFsbY29tPmZqa+tPS0vKWlpaWQqEQNBgMAgAoFArX1tZu27ZtGwMDAx+VSqVzBQUFP0lJSf8hHx8f/xkMBr+Bf/nyZUdHR38B/+uvv0qSJEmyWCz+AcTExPwbGhqalZSU/F/5R+0r+w4p7A4Q7AAAAABJRU5ErkJggg==">
     <style>
         :root {
-            /* Palette fornita */
+            /* Palette per entrambi i temi (base) */
             --palette-color1: #4DA8DA; /* Azzurro cielo */
             --palette-color2: #80D8C3; /* Verde acqua/Menta */
             --palette-color3: #FFD66B; /* Giallo sole/Mais */
             --palette-color4: #F5F5F5; /* Grigio chiarissimo/Bianco sporco */
-            /* Ho aggiunto un colore scuro per i testi nel tema chiaro, dato che la palette ne era priva */
-            --palette-dark-text-contrast: #2c3e50; /* Blu scuro intenso per contrasto */
+            --palette-dark-text-contrast: #1f2937; /* Blu scuro intenso per contrasto su chiaro */
             --palette-accent-hover-darker: color-mix(in srgb, var(--palette-color3) 80%, black 20%);
 
 
@@ -29,28 +28,30 @@
             --puppy-text-primary-light: var(--palette-dark-text-contrast);
             --puppy-text-secondary-light: color-mix(in srgb, var(--palette-dark-text-contrast) 60%, var(--palette-color1) 40%);
             --puppy-card-bg-light: #ffffff;
-            --puppy-paw-print-light: var(--palette-color2); /* Verde acqua per le zampe */
+            --puppy-paw-print-light: var(--palette-color2); 
             --puppy-button-theme-bg-l: var(--palette-dark-text-contrast);
             --puppy-button-theme-text-l: var(--palette-color4);
             --puppy-pattern-blend-light: overlay;
+            --puppy-border-color-light: color-mix(in srgb, var(--palette-color1) 60%, #fff 40%);
 
 
-            /* Puppy Theme - Dark */
-            --puppy-bg-dark: #1e2a3a;  /* Un blu notte profondo */
-            --puppy-block-bg-dark: var(--palette-color1); /* Azzurro cielo anche per blocchi scuri, per un look fresco */
+            /* Puppy Theme - Dark (Ripristinata) */
+            --puppy-bg-dark: #1e2a3a;  
+            --puppy-block-bg-dark: var(--palette-color1); 
             --puppy-block-bg-hover-dark: color-mix(in srgb, var(--palette-color1) 85%, var(--palette-color4) 15%);
             --puppy-accent-dark-theme: var(--palette-color3);
             --puppy-accent-dark-dark-theme: var(--palette-accent-hover-darker);
             --puppy-text-primary-dark: var(--palette-color4);
-            --puppy-text-secondary-dark: var(--palette-color2); /* Verde acqua per testo secondario */
+            --puppy-text-secondary-dark: var(--palette-color2); 
             --puppy-card-bg-dark: #2a3b4f;
             --puppy-paw-print-dark: var(--palette-color2);
             --puppy-button-theme-bg-d: var(--palette-color4);
-            --puppy-button-theme-text-d: var(--palette-dark-text-contrast);
+            --puppy-button-theme-text-d: var(--palette-dark-text-contrast); /* Usiamo lo stesso testo scuro per contrasto */
             --puppy-pattern-blend-dark: lighten;
+            --puppy-border-color-dark: color-mix(in srgb, var(--palette-color1) 40%, #000 60%);
 
 
-            /* Current Variables */
+            /* --- Current Variables (Default to Dark Theme) --- */
             --current-body-bg: var(--puppy-bg-dark);
             --current-pattern-blend-mode: var(--puppy-pattern-blend-dark);
             --current-block-bg: var(--puppy-block-bg-dark);
@@ -63,6 +64,7 @@
             --current-paw-print-color: var(--puppy-paw-print-dark);
             --current-button-theme-bg: var(--puppy-button-theme-bg-d);
             --current-button-theme-text: var(--puppy-button-theme-text-d);
+            --current-border-color: var(--puppy-border-color-dark);
         }
 
         body.light-theme {
@@ -78,47 +80,51 @@
             --current-paw-print-color: var(--puppy-paw-print-light);
             --current-button-theme-bg: var(--puppy-button-theme-bg-l);
             --current-button-theme-text: var(--puppy-button-theme-text-l);
+            --current-border-color: var(--puppy-border-color-light);
         }
 
         body {
             font-family: 'Open Sans', sans-serif;
             margin: 0;
-            padding: 20px;
+            padding: 10px;
             background-color: var(--current-body-bg);
             color: var(--current-text-primary);
             transition: background-color 0.3s, color 0.3s;
             -webkit-tap-highlight-color: transparent;
             
-            background-image: url('dog-pat-bk.jpg'); /* Default per tema scuro */
-            background-size: 200px 200px;
+            background-image: url('dog-pat-bk.jpg'); 
+            background-size: 180px 180px; 
             background-repeat: repeat;
             background-blend-mode: var(--current-pattern-blend-mode);
+            background-attachment: fixed; 
         }
         body.light-theme {
-            background-image: url('dog-pat.jpg'); /* Specifica per tema chiaro */
+            background-image: url('dog-pat.jpg'); 
         }
 
 
         .page-title-container {
             text-align: center;
-            margin-bottom: 35px;
+            margin-bottom: 25px; 
             background-color: color-mix(in srgb, var(--current-card-bg) 90%, transparent);
-            padding: 25px;
-            border-radius: 16px;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.07);
-            border: 1px solid var(--current-block-bg);
+            padding: 20px; 
+            border-radius: 12px; 
+            box-shadow: 0 5px 15px rgba(0,0,0,0.06); 
+            border: 1px solid var(--current-border-color);
         }
         .page-title {
             font-family: 'Russo One', sans-serif;
-            font-size: clamp(2.3em, 7vw, 3.5em);
+            font-size: clamp(2em, 6vw, 3.2em); 
             color: var(--current-accent);
-            margin-bottom: 10px;
-            text-shadow: 1px 1px 3px color-mix(in srgb, var(--current-text-primary) 20%, transparent);
+            margin-bottom: 8px;
+            text-shadow: 1px 1px 3px color-mix(in srgb, var(--current-body-bg) 50%, transparent);
+            word-break: break-word; 
         }
         .page-subtitle {
-            font-size: clamp(1em, 3.5vw, 1.2em);
+            font-size: clamp(0.9em, 3vw, 1.1em); 
             color: var(--current-text-secondary);
             font-weight: 600;
+            word-break: break-word; 
         }
 
         .items-list-container {
@@ -133,7 +139,7 @@
             margin-top: 12px;
             border-radius: 10px 10px 0 0;
             font-family: 'Russo One', sans-serif;
-            color: var(--current-text-primary);
+            color: var(--current-text-primary); 
             border-left: 7px solid var(--current-accent);
             box-shadow: 0 4px 8px rgba(0,0,0,0.12);
             cursor: pointer;
@@ -142,8 +148,11 @@
             transition: background-color 0.2s ease, opacity 0.3s ease;
             position: relative;
         }
-        body.light-theme .item-block-header { /* Testo più scuro per header su tema chiaro */
-             color: var(--palette-dark-text-contrast);
+         body.light-theme .item-block-header {
+             color: var(--palette-light-text-dark);
+        }
+         body:not(.light-theme) .item-block-header {
+             color: var(--palette-dark-textPrimary);
         }
 
 
@@ -167,7 +176,7 @@
 
         .toggle-icon, .completed-block-icon {
             margin-right: 14px;
-            font-size: 1.4em;
+            font-size: 1.4em; 
             color: var(--current-accent);
             transition: transform 0.2s ease-in-out;
             width: 24px;
@@ -178,7 +187,7 @@
         }
          .completed-block-icon {
             font-weight: bold;
-            color: var(--current-paw-print-color);
+            color: var(--current-paw-print-color); 
          }
         .item-block-header.expanded .toggle-icon {
             transform: rotate(90deg);
@@ -188,23 +197,23 @@
             flex-grow: 1;
             min-width: 0;
         }
-        .header-info .phase-title {
-            font-size: 1.2em;
+        .header-info .phase-title { 
+            font-size: clamp(1em, 3.5vw, 1.2em); 
             font-weight: 700;
             font-family: 'Open Sans', sans-serif;
-            /* Il colore è gestito dalla specificità di .item-block-header e body.light-theme .item-block-header */
+            word-break: break-word; 
         }
               
         .card-group-container {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(310px, 1fr));
-            gap: 18px;
-            padding: 18px;
-            background-color: color-mix(in srgb, var(--current-block-bg) 80%, var(--current-body-bg) 20%);
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); 
+            gap: 15px; 
+            padding: 15px;
+            background-color: color-mix(in srgb, var(--current-block-bg) 90%, var(--current-card-bg) 10%); 
             border-radius: 0 0 10px 10px;
             border-left: 7px solid var(--current-accent);
-            border-right: 1px solid var(--current-block-bg);
-            border-bottom: 1px solid var(--current-block-bg);
+            border-right: 1px solid var(--current-border-color);
+            border-bottom: 1px solid var(--current-border-color);
             margin-bottom:12px;
             transition: background-color 0.3s;
         }
@@ -223,6 +232,7 @@
             flex-direction: column;
             justify-content: space-between;
             border-top: 5px solid var(--current-accent);
+            border: 1px solid var(--current-border-color); 
             transition: opacity 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease, background-color 0.3s;
             color: var(--current-text-primary);
             position: relative;
@@ -243,7 +253,7 @@
             position: relative;
             border-radius: 8px;
             overflow: hidden;
-            border: 2px solid var(--current-block-bg);
+            border: 2px solid var(--current-border-color); 
         }
         .card-thumbnail {
             width: 100%;
@@ -280,23 +290,24 @@
 
         .card-title {
             font-weight: 700;
-            font-size: 1.15em;
+            font-size: clamp(1em, 4vw, 1.15em); 
             margin-bottom: 6px;
             color: var(--current-text-primary);
-            word-break: break-word;
+            word-break: break-word; 
         }
         .card-reason {
-            font-size: 0.95em;
+            font-size: clamp(0.85em, 3vw, 0.95em); 
             color: var(--current-text-secondary);
             margin-bottom: 14px;
             font-style: italic;
             line-height: 1.5;
+            word-break: break-word; 
         }
       
         .card-footer {
             margin-top: auto;
             padding-top: 14px;
-            border-top: 1px solid var(--current-block-bg-hover);
+            border-top: 1px solid var(--current-border-color);
             display: flex;
             align-items: center;
         }
@@ -322,9 +333,9 @@
         .completed-checkbox:checked::before {
             content: '✔';
             font-size: 16px;
-            color: var(--palette-dark-text-contrast); /* Colore scuro per contrasto con accento giallo/arancio */
+            color: var(--palette-light-text-dark); 
             position: absolute;
-            top: -1px;
+            top: -1px; 
             left: 2px;
             font-weight: bold;
         }
@@ -337,8 +348,8 @@
         }
         .card.completed {
             opacity: 0.65;
-            border-top-color: var(--current-text-secondary);
-            box-shadow: inset 0 0 10px rgba(0,0,0,0.1), 0 2px 5px rgba(0,0,0,0.05);
+            border-top-color: var(--current-text-secondary); 
+            box-shadow: inset 0 0 10px color-mix(in srgb, var(--current-body-bg) 30%, transparent), 0 2px 5px rgba(0,0,0,0.05);
         }
         .card.completed::after {
             content: "🐾";
@@ -355,51 +366,67 @@
             text-decoration: line-through wavy var(--current-accent) 1.5px;
         }
         .card.completed:hover {
-             box-shadow: inset 0 0 10px rgba(0,0,0,0.15), 0 5px 10px rgba(0,0,0,0.12), 0 0 10px color-mix(in srgb, var(--current-accent-dark) 50%, transparent);
+             box-shadow: inset 0 0 10px color-mix(in srgb, var(--current-body-bg) 30%, transparent), 0 5px 10px rgba(0,0,0,0.12), 0 0 10px color-mix(in srgb, var(--current-accent-dark) 50%, transparent);
         }
 
         .filters {
             background-color: var(--current-block-bg);
-            padding: 18px;
-            margin-bottom: 30px;
-            border-radius: 12px;
-            box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+            padding: 15px; 
+            margin-bottom: 25px;
+            border-radius: 10px; 
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1); 
             display: flex;
-            flex-wrap: wrap;
+            flex-wrap: wrap; 
             align-items: center;
-            gap: 12px 15px;
+            gap: 10px 12px;
             transition: background-color 0.3s;
+        }
+        .filters .filter-group {
+            display: flex;
+            flex-wrap: wrap; 
+            gap: 8px 10px;
+            flex-grow: 1; 
+            min-width: 180px; 
         }
         .filters label {
             margin-right: 6px;
-            font-size: 0.95em;
+            font-size: 0.9em; 
             font-weight: 600;
             color: var(--current-text-primary);
         }
-         body.light-theme .filters label {
-            color: var(--palette-dark-text-contrast);
+         body.light-theme .filters label { 
+            color: var(--palette-light-text-dark); 
         }
+         body:not(.light-theme) .filters label {
+            color: var(--palette-dark-textPrimary);
+         }
 
         .filters input[type="checkbox"] {
             margin-right: 5px;
-            transform: scale(1.15);
+            transform: scale(1.1); 
             accent-color: var(--current-accent);
+        }
+        .filters .action-buttons {
+            display: flex;
+            flex-wrap: wrap; 
+            gap: 8px;
+            margin-left: auto; 
         }
       
         .filters button {
-            padding: 10px 16px;
+            padding: 9px 14px; 
             background-color: var(--current-accent);
-            color: var(--palette-dark-text-contrast);
+            color: var(--palette-light-text-dark);  
             border: none;
-            border-radius: 8px;
+            border-radius: 7px; 
             cursor: pointer;
-            font-size: 0.9em;
+            font-size: 0.85em; 
             font-weight: bold;
             text-transform: uppercase;
             transition: background-color 0.2s ease, transform 0.1s ease;
             font-family: 'Russo One', sans-serif;
             letter-spacing: 0.7px;
-            flex-shrink: 0;
+            flex-shrink: 0; 
             box-shadow: 0 2px 4px rgba(0,0,0,0.15);
         }
         .filters button:hover {
@@ -414,13 +441,41 @@
         .filters button#theme-toggle {
             background-color: var(--current-button-theme-bg);
             color: var(--current-button-theme-text);
-            font-size: 1.3em;
-            padding: 8px 12px;
-            min-width: 45px;
+            font-size: 1.2em; 
+            padding: 7px 11px;
+            min-width: 42px;
         }
          .filters button#theme-toggle:hover {
             background-color: color-mix(in srgb, var(--current-button-theme-bg) 80%, black 20%);
         }
+        
+        @media (max-width: 780px) { 
+            .filters {
+                flex-direction: column;
+                align-items: stretch; 
+                gap: 15px; 
+            }
+            .filters .filter-group {
+                justify-content: center; 
+                margin-bottom: 0; 
+                flex-basis: 100%; 
+                min-width: auto; 
+            }
+            .filters .action-buttons {
+                margin-left: 0; 
+                justify-content: center; 
+                width: 100%; 
+            }
+            .filters .action-buttons button {
+                flex-grow: 1; 
+                font-size: 0.8em; 
+                min-width: 100px; 
+            }
+            .filters .action-buttons button#theme-toggle {
+                flex-grow: 0; 
+            }
+        }
+
 
         .notes-container {
             background-color: var(--current-card-bg);
@@ -428,6 +483,7 @@
             margin-top: 35px;
             border-radius: 12px;
             box-shadow: 0 4px 9px rgba(0,0,0,0.09);
+            border: 1px solid var(--current-border-color);
         }
         .notes-container h3 {
             font-family: 'Russo One', sans-serif;
@@ -438,7 +494,7 @@
             font-size: 1.4em;
         }
         .notes-container ul {
-            list-style-type: '🦴 ';
+            list-style-type: '🦴 '; 
             padding-left: 30px;
             color: var(--current-text-secondary);
             font-size: 1em;
@@ -647,10 +703,10 @@
           }
         };
 
-        const COMPLETED_STORAGE_KEY = 'puppyTrainingTrackerCompleted_v6'; // increment version
-        const EXPANDED_BLOCKS_KEY = 'puppyTrainingExpandedBlocks_v6';
-        const THEME_KEY = 'puppyTrainingTrackerTheme_v6';
-        const FILTERS_STATE_KEY = 'puppyTrainingFiltersState_v6';
+        const COMPLETED_STORAGE_KEY = 'puppyTrainingTrackerCompleted_v8'; // increment version
+        const EXPANDED_BLOCKS_KEY = 'puppyTrainingExpandedBlocks_v8';
+        const THEME_KEY = 'puppyTrainingTrackerTheme_v8';
+        const FILTERS_STATE_KEY = 'puppyTrainingFiltersState_v8';
 
         let completedItems = {};
         let expandedBlocks = {};
@@ -672,7 +728,7 @@
         }
 
         function getYoutubeThumbnailUrl(videoId, quality = 'mqdefault') {
-            if (!videoId) return 'data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7';
+            if (!videoId) return 'data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7'; 
             return `https://img.youtube.com/vi/${videoId}/${quality}.jpg`;
         }
         
@@ -686,7 +742,6 @@
                 body.classList.remove('light-theme');
                 themeToggleButton.textContent = '☀️';
             }
-            // L'immagine di sfondo è già gestita dal CSS specifico per tema
         }
 
         function toggleTheme() {
@@ -698,7 +753,6 @@
                 localStorage.setItem(THEME_KEY, 'dark');
                 themeToggleButton.textContent = '☀️';
             }
-            // L'immagine di sfondo è già gestita dal CSS specifico per tema
         }
 
 
@@ -755,7 +809,7 @@
             if (!headerEl || !fase) return;
 
             const allCompleted = checkAllItemsInBlockCompleted(blockId, fase);
-            const iconEl = headerEl.querySelector('span:first-child');
+            const iconEl = headerEl.querySelector('span:first-child'); 
 
             headerEl.classList.toggle('all-completed', allCompleted);
 
@@ -763,7 +817,7 @@
                 if (allCompleted) {
                     iconEl.classList.remove('toggle-icon');
                     iconEl.classList.add('completed-block-icon');
-                    iconEl.innerHTML = '🐾';
+                    iconEl.innerHTML = '🐾'; 
                 } else {
                     iconEl.classList.remove('completed-block-icon');
                     iconEl.classList.add('toggle-icon');
@@ -791,7 +845,7 @@
                     return;
                 }
                 
-                headerEl.style.display = 'flex';
+                headerEl.style.display = 'flex'; 
                 
                 const cardGroupContainer = document.querySelector(`.card-group-container[data-content-for="${blockId}"]`);
                 if (cardGroupContainer) {
@@ -831,13 +885,13 @@
             expandedBlocks[blockId] = isExpanding;
             saveExpandedState();
             
-            updateBlockHeaderStatus(headerElement, blockId, fase);
-            applyFilters();
+            updateBlockHeaderStatus(headerElement, blockId, fase); 
+            applyFilters(); 
         }
 
         function renderTrainingGuide() {
             appContainer.innerHTML = '';
-            notesSectionContainer.innerHTML = '';
+            notesSectionContainer.innerHTML = ''; 
             const trainingSequence = puppyTrainingData.sequenza_addestramento_cuccioli;
             
             if (pageDescriptionArea && trainingSequence.descrizione) {
@@ -846,7 +900,7 @@
 
             trainingSequence.fasi.forEach(fase => {
                 const phaseDiv = document.createElement('div');
-                phaseDiv.className = 'phase-container';
+                phaseDiv.className = 'phase-container'; 
 
                 const itemsListContainer = document.createElement('div');
                 itemsListContainer.className = 'items-list-container';
@@ -857,7 +911,7 @@
                 blockHeader.className = 'item-block-header';
                 blockHeader.dataset.blockId = blockId;
 
-                const iconSpan = document.createElement('span');
+                const iconSpan = document.createElement('span'); 
                 blockHeader.appendChild(iconSpan);
 
                 const headerInfo = document.createElement('div');
@@ -905,7 +959,7 @@
                 notesSectionContainer.appendChild(notesContainer);
             }
 
-            applyFilters();
+            applyFilters(); 
         }
 
         function createCardElement(esercizioData, faseData, uniqueCardId) {
@@ -946,14 +1000,14 @@
                 const blockId = generateBlockId(faseData.fase_id);
                 const headerEl = document.querySelector(`.item-block-header[data-block-id="${blockId}"]`);
                 updateBlockHeaderStatus(headerEl, blockId, faseData);
-                applyFilters();
+                applyFilters(); 
             });
             return card;
         }
 
         function toggleAllVisible(markAsCompleted) {
             document.querySelectorAll('.card-group-container:not(.collapsed) .card').forEach(card => {
-                if (card.style.display !== 'none') {
+                if (card.style.display !== 'none') { 
                     const checkbox = card.querySelector('.completed-checkbox');
                     const itemId = card.dataset.itemId;
                     if (checkbox && checkbox.checked !== markAsCompleted) {
@@ -974,7 +1028,7 @@
                 }
             });
             saveCompletedStatus();
-            applyFilters();
+            applyFilters(); 
         }
         
         filterHideCompletedEl.addEventListener('change', () => {
@@ -988,7 +1042,7 @@
 
         document.addEventListener('DOMContentLoaded', () => {
             loadState();
-            applyCurrentTheme();
+            applyCurrentTheme(); 
             renderTrainingGuide();
         });
 
